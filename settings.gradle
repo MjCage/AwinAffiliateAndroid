@@ -1,0 +1,3 @@
+rootProject.name='Awin Affiliate Android Example'
+include ':app'
+include ':awinaffiliateandroid'
