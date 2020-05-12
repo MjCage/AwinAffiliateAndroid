@@ -26,14 +26,14 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import de.lifepathapps.awinaffiliateandroid.R;
 
-class CookieConsentSheet extends BottomSheetDialogFragment {
+public class CookieConsentSheet extends BottomSheetDialogFragment {
 
     private Context context;
     private String cookiePolicyUrl;
     private SharedPreferences preferences;
     private boolean edit;
 
-    CookieConsentSheet(Context context, String cookiePolicyUrl, boolean edit){
+    public CookieConsentSheet(Context context, String cookiePolicyUrl, boolean edit){
         this.context = context;
         this.cookiePolicyUrl = cookiePolicyUrl;
         this.preferences = PreferenceManager.getDefaultSharedPreferences(context);
