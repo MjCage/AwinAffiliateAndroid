@@ -90,7 +90,8 @@ public class CookieConsentSheet extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 preferences.edit().putString("cookieConsent", "true").apply();
-                listener.onConsentChanged();
+                if (listener != null)
+                    listener.onConsentChanged();
                 dismiss();
             }
         });
@@ -103,7 +104,8 @@ public class CookieConsentSheet extends BottomSheetDialogFragment {
                 else
                     preferences.edit().putString("cookieConsent", "false").apply();
 
-                listener.onConsentChanged();
+                if (listener != null)
+                    listener.onConsentChanged();
                 dismiss();
             }
         });
