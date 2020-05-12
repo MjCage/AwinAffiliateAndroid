@@ -32,9 +32,11 @@ public class CookieConsentSheet extends BottomSheetDialogFragment {
     private String cookiePolicyUrl;
     private SharedPreferences preferences;
     private boolean edit;
+    private ConsentManager.ConsentListener listener;
 
-    public CookieConsentSheet(Context context, String cookiePolicyUrl, boolean edit){
+    CookieConsentSheet(Context context, ConsentManager.ConsentListener listener, String cookiePolicyUrl, boolean edit){
         this.context = context;
+        this.listener = listener;
         this.cookiePolicyUrl = cookiePolicyUrl;
         this.preferences = PreferenceManager.getDefaultSharedPreferences(context);
         this.edit = edit;
@@ -88,6 +90,7 @@ public class CookieConsentSheet extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 preferences.edit().putString("cookieConsent", "true").apply();
+                listener.onConsentChanged();
                 dismiss();
             }
         });
@@ -100,6 +103,7 @@ public class CookieConsentSheet extends BottomSheetDialogFragment {
                 else
                     preferences.edit().putString("cookieConsent", "false").apply();
 
+                listener.onConsentChanged();
                 dismiss();
             }
         });

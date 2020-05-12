@@ -9,19 +9,24 @@ import androidx.fragment.app.FragmentManager;
 public class ConsentManager {
     private Context context;
     private SharedPreferences preferences;
+    private ConsentListener listener;
 
     public ConsentManager(Context context){
         this.context = context;
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        this.listener = null;
+    }
+
+    public void setConsentListener(ConsentListener listener) {
+        this.listener = listener;
     }
 
     public Boolean getConsent(String cookiePolicyUrl, FragmentManager fragmentManager){
         String consentString = preferences.getString("cookieConsent", null);
 
         if (consentString == null){
-            CookieConsentSheet consentSheet = new CookieConsentSheet(context, cookiePolicyUrl, false);
+            CookieConsentSheet consentSheet = new CookieConsentSheet(context, listener, cookiePolicyUrl, false);
             consentSheet.show(fragmentManager,"cookieRequest");
-            consentString = preferences.getString("cookieConsent", null);
         }
 
         if (consentString == null)
@@ -35,7 +40,11 @@ public class ConsentManager {
     }
 
     public void editConsent(String cookiePolicyUrl, FragmentManager fragmentManager){
-        CookieConsentSheet consentSheet = new CookieConsentSheet(context, cookiePolicyUrl, true);
+        CookieConsentSheet consentSheet = new CookieConsentSheet(context, listener, cookiePolicyUrl, true);
         consentSheet.show(fragmentManager,"cookieRequest");
+    }
+
+    public interface ConsentListener {
+        void onConsentChanged();
     }
 }
