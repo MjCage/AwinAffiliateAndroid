@@ -1,4 +1,4 @@
-package de.lifepathapps.awinaffiliateandroid;
+package de.lifepathapps.awinaffiliateandroid.ads;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import java.util.List;
 import java.util.Locale;
+
+import de.lifepathapps.awinaffiliateandroid.R;
 
 public class InterstitialAd {
     private Dialog customDialog;

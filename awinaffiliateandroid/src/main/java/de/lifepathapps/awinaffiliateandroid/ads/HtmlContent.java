@@ -1,4 +1,4 @@
-package de.lifepathapps.awinaffiliateandroid;
+package de.lifepathapps.awinaffiliateandroid.ads;
 
 public class HtmlContent {
     int s, v, q, r;

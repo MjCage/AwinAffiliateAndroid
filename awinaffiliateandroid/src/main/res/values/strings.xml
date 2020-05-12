@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cookie_permission">Wir verwenden Cookies zu Werbezwecken, um verhaltensbasiert personalisierte Werbeinhalte bereitzustellen und um Werbeanzeigen zu verwalten, einzublenden und nachzuverfolgen. Klicken Sie 1hier2, um mehr zu erfahren.</string>
+    <string name="cookie_see_policy">Mehr erfahren</string>
+    <string name="cookie_accecpt">Alle akzeptieren</string>
+    <string name="cookie_adjust">Cookie-Einstellungen</string>
+    <string name="cookie_required">Erforderliche Cookies</string>
+    <string name="cookie_ads">Cookies zu Werbezwecken</string>
+    <string name="cookie_save">Einstellungen speichern</string>
+    <string name="cookie_label">Welche Cookies dürfen benutzt werden?</string>
+</resources>

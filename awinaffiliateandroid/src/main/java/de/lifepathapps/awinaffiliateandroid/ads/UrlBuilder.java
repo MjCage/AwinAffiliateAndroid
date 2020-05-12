@@ -1,8 +1,8 @@
-package de.lifepathapps.awinaffiliateandroid;
+package de.lifepathapps.awinaffiliateandroid.ads;
 
-public class UrlBuilder {
+class UrlBuilder {
 
-    public String build(int s, int v, int q, int r, boolean consent){
+    String build(int s, int v, int q, int r, boolean consent){
         int cons = 0;
         if (consent)
             cons = 1;

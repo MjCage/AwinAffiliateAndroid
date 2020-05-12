@@ -1,4 +1,4 @@
-package de.lifepathapps.awinaffiliateandroid;
+package de.lifepathapps.awinaffiliateandroid.ads;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.webkit.WebView;
 
 import java.util.List;
 import java.util.Locale;
+
+import de.lifepathapps.awinaffiliateandroid.R;
 
 public class BannerAd extends WebView {
     private String htmlData;

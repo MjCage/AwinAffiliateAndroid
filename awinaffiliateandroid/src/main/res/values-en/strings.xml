@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cookie_permission">We use cookies for advertising purposes to deliver personalized marketing content based on user behavior and to operate, serve and track ads. Click 1here2 to learn more.</string>
+    <string name="cookie_see_policy">Learn more</string>
+    <string name="cookie_accecpt">Accept all</string>
+    <string name="cookie_adjust">Cookie settings</string>
+    <string name="cookie_required">Required cookies</string>
+    <string name="cookie_ads">Cookies for advertisement</string>
+    <string name="cookie_save">Save settings</string>
+    <string name="cookie_label">Which cookies can be used?</string>
+</resources>
